@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load  static %}
+{% block 成员介绍 %}
+active
+{% endblock %}
+{% block 标题 %}
+active
+{% endblock %}
+{{ form.media }}
+
+{% block 主体 %}
+    <div style="padding-left: 150px;padding-right: 150px
+    ;padding-top: 100px;padding-bottom: 100px">
+    <h1 style="padding-bottom: 10px;color: #0d78e6">{{name}}</h1>
+    <small>{{ grade }}</small><br>
+        <img src="{{ picture }}" alt="picture">
+        {% autoescape off %}
+
+    {{ content }}
+            <br>
+            <br>
+            <br>
+
+    <a class="btn btn-primary" href=".." role="button">back</a>
+    </div>
+
+
+{% endautoescape %}
+{% endblock  %}
+

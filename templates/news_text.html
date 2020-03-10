@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load  static %}
+{% block 氢能资讯 %}
+active
+{% endblock %}
+{% block 标题 %}
+氢能资讯
+{% endblock %}
+{{ form.media }}
+
+{% block 主体 %}
+    <div style="padding-left: 5vw;padding-right: 5vw
+    ;padding-top: 5vh;padding-bottom: 5vh">
+    <h1 style="padding-bottom: 10px;color: #0d78e6">{{name}}</h1>
+    <small>{{ time }}</small>
+        {% autoescape off %}
+
+    {{ form }}
+            <br>
+            <br>
+            <br>
+
+    <a class="btn btn-primary" href=".." role="button">back</a>
+    </div>
+
+
+{% endautoescape %}
+{% endblock  %}
+

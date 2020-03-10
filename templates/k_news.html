@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 标题 %}
+课题组动态
+{% endblock %}
+{% block 课题组动态 %}
+active
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课题组动态</title>
+</head>
+<body>
+{% block 主体 %}
+
+<h2 style="color: dodgerblue;; padding: 3vw;font-size: 2vmax;">课题组动态</h2>
+    <table class="table table-hover">
+        {% for foo in k_news.all %}
+    <thread >
+    <tr >
+        <th scope="col" >
+            <div style="padding-left: 3vw;padding-right: 3vw" >
+            <div style="float:left;margin:auto"><a style="font-weight:lighter;font-size: 1.2vmax" href="{{foo.id}}">◆ &nbsp;{{ foo.title }}</a></div>
+            <div style="float:right"><p style="font-size: 2vh">{{ foo.create_time }}</p> </div>
+            </div>
+        </th>
+    </tr>
+    </thread>
+    {% endfor %}
+    </table>
+{#       # {% autoescape off %}#}
+{##}
+{##}
+{#{% endautoescape %}#}
+
+
+{% endblock  %}
+</body>
+</html>
